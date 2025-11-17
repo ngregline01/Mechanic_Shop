@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+instance/
+.env
+venv/
+.idea/
+.DS_Store
+base.py
+database
+many.py
+New_app.py
+old_app.py
+pets.py
+App.py
+Backend_Project
+blueprint
+App

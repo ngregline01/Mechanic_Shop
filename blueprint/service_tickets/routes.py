@@ -4,6 +4,7 @@ from marshmallow import ValidationError
 from Mechanic_App.blueprint.models import Service_Tickets, Customers, Mechanics, db
 from Mechanic_App.blueprint.service_tickets.schemas import ticketschema, tickets_schema
 from . import tickets_bp
+from Mechanic_App.utils.util import token_required
 
 @tickets_bp.route("/", methods=['POST'])
 def create_services():
@@ -88,3 +89,6 @@ def removing_mechanics(ticket_id, mechanic_id):
         return jsonify({"Message": "Successfully remove mechanic"}), 200
     else:
         return jsonify({"Error", "Unable to delete mechanic"}), 400
+    
+
+   
